@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test and tooling cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Environment and local configuration
+.env
+.env.*
+
+# Raw/restricted datasets (download separately)
+data/raw/*
+!data/raw/.gitkeep
+
+# Reproducible generated outputs
+outputs/
+
+# Trained model binaries and archives
+*.pkl
+*.joblib
+
+# Local logs
+*.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

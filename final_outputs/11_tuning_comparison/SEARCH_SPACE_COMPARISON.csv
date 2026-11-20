@@ -1,0 +1,9 @@
+hyperparameter,optuna_original_status,optuna_original_domain,grid_original_status,grid_original_values,controlled_status_both,controlled_common_domain,fairness_note
+n_estimators,optimized,int 100..400 step 25 (13 values),optimized,"[100, 200] (2 values)",optimized,"[100, 400]",Optuna broader; original Grid omits 225..400 and most intermediate values
+max_depth,optimized,int 3..8 inclusive (6 values),optimized,"[3, 4] (2 values)",optimized,"[3, 6]",Original Grid only shallow trees
+learning_rate,optimized,float 0.01..0.20 log-uniform,optimized,"[0.03, 0.08] (2 values)",optimized,"[0.02, 0.08]",Original domains overlap but are not equivalent; Optuna samples continuously on log scale
+subsample,optimized,float 0.6..1.0 uniform,fixed,[0.8],optimized,"[0.65, 1.0]",Original Grid gives no search opportunity
+colsample_bytree,optimized,float 0.6..1.0 uniform,fixed,[0.8],optimized,"[0.65, 1.0]",Original Grid gives no search opportunity
+min_child_weight,optimized,int 1..10 inclusive (10 values),optimized,"[1, 5] (2 values)",optimized,"[1, 8]",Original Grid is much narrower
+reg_lambda,optimized,float 0.001..10 log-uniform,fixed,[1.0],controlled/fixed,[1.0],Original Grid does not optimize L2 regularization
+reg_alpha,optimized,float 0.0001..5 log-uniform,fixed,[0.0],controlled/fixed,[0.0],Original Grid does not optimize L1 regularization
